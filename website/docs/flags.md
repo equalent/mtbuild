@@ -10,6 +10,7 @@ flags { "flag_list" }
 
 | Flag                  | Description                                                         | Notes |
 |-----------------------|---------------------------------------------------------------------|----------------|
+| EnableUnitySupport    | Enable Visual Studio 2019+ Unity (JUMBO) build support where multiple source files are combined to improve build performance. |
 | ExcludeFromBuild      | Exclude a source code file from the build, for the current configuration. |
 | FatalCompileWarnings  | Treat compiler warnings as errors.                                  |
 | FatalLinkWarnings     | Treat linker warnings as errors.                                    |
