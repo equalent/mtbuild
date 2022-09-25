@@ -196,6 +196,7 @@
 		kind        "ConsoleApp"
 		includedirs { "contrib/lua/src", "contrib/luashim" }
 		links       { "lua-lib" }
+		flags       { "EnableUnitySupport" }
 
 		-- optional 3rd party libraries
 		if not _OPTIONS["no-zlib"] then

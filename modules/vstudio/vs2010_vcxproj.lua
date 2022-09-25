@@ -200,6 +200,7 @@
 				m.wholeProgramOptimization,
 				m.nmakeOutDirs,
 				m.windowsSDKDesktopARMSupport,
+				m.enableUnitySupport
 			}
 		end
 	end
@@ -2951,6 +2952,14 @@
 				else
 					m.element("ScanSourceForModuleDependencies", nil, "false")
 				end
+			end
+		end
+	end
+
+	function m.enableUnitySupport(cfg)
+		if _ACTION >= "vs2019" then
+			if cfg.flags.EnableUnitySupport then
+				m.element("EnableUnitySupport", nil, "true")
 			end
 		end
 	end

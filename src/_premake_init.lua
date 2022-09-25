@@ -536,7 +536,8 @@
 			"C++14",               -- DEPRECATED
 			"C90",                 -- DEPRECATED
 			"C99",                 -- DEPRECATED
-			"C11",                 -- DEPRECATED
+			"C11",                 -- DEPRECATED,
+			"EnableUnitySupport"
 		},
 		aliases = {
 			FatalWarnings = { "FatalWarnings", "FatalCompileWarnings", "FatalLinkWarnings" },

@@ -4,6 +4,7 @@
  * \author Copyright (c) 2002-2021 Jason Perkins and the Premake project
  */
 
+#pragma once
 #define lua_c
 #include "lua.h"
 #include "lauxlib.h"
