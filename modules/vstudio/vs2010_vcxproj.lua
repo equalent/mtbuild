@@ -200,7 +200,7 @@
 				m.wholeProgramOptimization,
 				m.nmakeOutDirs,
 				m.windowsSDKDesktopARMSupport,
-				m.enableUnitySupport
+				m.unityBuild
 			}
 		end
 	end
@@ -400,7 +400,7 @@
 			m.compileAsWinRT,
 			m.externalWarningLevel,
 			m.externalAngleBrackets,
-			m.scanSourceForModuleDependencies,
+			m.scanSourceForModuleDependencies
 		}
 
 		if cfg.kind == p.STATICLIB then
@@ -807,6 +807,7 @@
 				if fcfg then
 					return {
 						m.excludedFromBuild,
+						m.excludedFromUnityBuild,
 						m.objectFileName,
 						m.clCompilePreprocessorDefinitions,
 						m.clCompileUndefinePreprocessorDefinitions,
@@ -2956,10 +2957,18 @@
 		end
 	end
 
-	function m.enableUnitySupport(cfg)
+	function m.unityBuild(cfg)
 		if _ACTION >= "vs2019" then
-			if cfg.flags.EnableUnitySupport then
+			if cfg.flags.UnityBuild then
 				m.element("EnableUnitySupport", nil, "true")
+			end
+		end
+	end
+
+	function m.excludedFromUnityBuild(cfg, condition)
+		if _ACTION >= "vs2019" then
+			if cfg.flags.ExcludeFromUnityBuild then
+				m.element("IncludeInUnityFile", condition, "false")
 			end
 		end
 	end

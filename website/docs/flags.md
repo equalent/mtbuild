@@ -10,8 +10,8 @@ flags { "flag_list" }
 
 | Flag                  | Description                                                         | Notes |
 |-----------------------|---------------------------------------------------------------------|----------------|
-| EnableUnitySupport    | Enable Visual Studio 2019+ Unity (JUMBO) build support where multiple source files are combined to improve build performance. |
 | ExcludeFromBuild      | Exclude a source code file from the build, for the current configuration. |
+| ExcludeFromUnityBuild      | Exclude a source code file from unity build and compile it separately. |
 | FatalCompileWarnings  | Treat compiler warnings as errors.                                  |
 | FatalLinkWarnings     | Treat linker warnings as errors.                                    |
 | FatalWarnings         | Treat all warnings as errors; equivalent to FatalCompileWarnings, FatalLinkWarnings |
@@ -35,6 +35,7 @@ flags { "flag_list" }
 | ShadowedVariables     | Warn when a variable, type declaration, or function is shadowed.    |
 | StaticRuntime         | Perform a static link against the standard runtime libraries.       | Deprecated - use staticruntime "On" instead. |
 | UndefinedIdentifiers | Warn if an undefined identifier is evaluated in an #if directive.   |
+| UnityBuild           | Enable Visual Studio 2019+ unity (JUMBO) build where multiple source files are combined to improve build performance. |
 | WinMain               | Use `WinMain()` as entry point for Windows applications, rather than the default `main()`. |
 | WPF                   | Mark the project as using Windows Presentation Framework, rather than WinForms. |
 | C++11                 | Pass the c++11 flag to the gcc/clang compilers (msvc ignores this currently) |

@@ -196,7 +196,7 @@
 		kind        "ConsoleApp"
 		includedirs { "contrib/lua/src", "contrib/luashim" }
 		links       { "lua-lib" }
-		flags       { "EnableUnitySupport" }
+		flags       { "UnityBuild" }
 
 		-- optional 3rd party libraries
 		if not _OPTIONS["no-zlib"] then
@@ -270,6 +270,9 @@
 		filter "system:haiku"
 			defines     { "LUA_USE_POSIX", "LUA_USE_DLOPEN", "_BSD_SOURCE" }
 			links       { "network", "bsd" }
+
+		filter "files:src/host/os_uuid.c"
+			flags { "ExcludeFromUnityBuild" }
 
 
 	-- optional 3rd party libraries

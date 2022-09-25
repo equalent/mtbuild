@@ -537,7 +537,8 @@
 			"C90",                 -- DEPRECATED
 			"C99",                 -- DEPRECATED
 			"C11",                 -- DEPRECATED,
-			"EnableUnitySupport"
+			"UnityBuild",
+			"ExcludeFromUnityBuild"
 		},
 		aliases = {
 			FatalWarnings = { "FatalWarnings", "FatalCompileWarnings", "FatalLinkWarnings" },
